@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PicVerse | Visual Search</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sticky Branded Header -->
+  <header class="app-header">
+    <div class="logo-container">
+      <h1>PicVerse</h1>
+      <p class="tagline">Discover high-resolution imagery across the universe.</p>
+    </div>
+
+    <!-- Search Form -->
+    <form id="search-form" class="search-box">
+      <label for="search-input" class="sr-only">Search images</label>
+      <input 
+        id="search-input" 
+        type="search" 
+        placeholder="Try searching 'Cyberpunk', 'Forest', or 'Architecture'..." 
+        required 
+      />
+      <button type="submit" id="search-btn">Search</button>
+      <!-- Original Feature #1: Clear Control -->
+      <button type="reset" id="clear-btn" class="secondary-btn">Clear</button>
+    </form>
+  </header>
+
+  <main class="main-content">
+    <!-- Original Feature #2: Quick-Pick Suggestion Chips -->
+    <section class="suggestions-section">
+      <span class="chip-label">Popular:</span>
+      <button class="chip">Nature</button>
+      <button class="chip">Architecture</button>
+      <button class="chip">Galaxies</button>
+      <button class="chip">Minimalism</button>
+    </section>
+
+    <!-- Status / Result Count Placeholder -->
+    <p id="status" class="status-message">Search for a topic above to explore images.</p>
+
+    <!-- Empty Responsive Grid Target -->
+    <section id="results" class="results-grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
